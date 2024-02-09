@@ -1,0 +1,95 @@
+{
+  "category": "Software",
+  "roadmap": [
+    {
+      "id": 1,
+      "title": "Dart Basics",
+      "items": [
+        { "id": 1, "title": "Syntax & Control Structures" },
+        { "id": 2, "title": "Functions & Lambdas" },
+        { "id": 3, "title": "Data Structures" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Flutter Fundamentals",
+      "items": [
+        { "id": 4, "title": "Widgets & State Management" },
+        { "id": 5, "title": "Navigation & Routing" },
+        { "id": 6, "title": "Forms & Input Handling" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "State Management",
+      "items": [
+        { "id": 7, "title": "Provider" },
+        { "id": 8, "title": "Riverpod" },
+        { "id": 9, "title": "Bloc Pattern" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "UI & Styling",
+      "items": [
+        { "id": 10, "title": "Custom Widgets" },
+        { "id": 11, "title": "Animations" },
+        { "id": 12, "title": "Responsive Design" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Backend Integration",
+      "items": [
+        { "id": 13, "title": "RESTful APIs" },
+        { "id": 14, "title": "GraphQL" },
+        { "id": 15, "title": "Firebase" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Advanced Topics",
+      "items": [
+        { "id": 16, "title": "Platform Channels" },
+        { "id": 17, "title": "Package Development" },
+        { "id": 18, "title": "Testing (Unit, Widget, Integration)" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Deployment & Distribution",
+      "items": [
+        { "id": 19, "title": "Build & Release for iOS" },
+        { "id": 20, "title": "Build & Release for Android" },
+        { "id": 21, "title": "CI/CD" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Performance Optimization",
+      "items": [
+        { "id": 22, "title": "Rendering Performance" },
+        { "id": 23, "title": "Async Programming" },
+        { "id": 24, "title": "State Management Optimization" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Security Practices",
+      "items": [
+        { "id": 25, "title": "Secure Storage" },
+        { "id": 26, "title": "Network Security" },
+        { "id": 27, "title": "Data Encryption" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Version Control",
+      "items": [
+        { "id": 28, "title": "Git Basics" },
+        { "id": 29, "title": "GitHub/ GitLab Integration" },
+        { "id": 30, "title": "Branch Strategies" }
+      ]
+    }
+  ]
+}
