@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 class Palette {
-  static const primaryColor = Color(0xFF73D3D6);
+  static const primaryColor = Color(0xFF00BBF9);
   static const primaryLightColor = Color(0xFF5472D3);
   static const primaryDarkColor = Color(0xFF002171);
   static const secondaryColor = Color(0xFF00BFA5);
   static const secondaryLightColor = Color(0xFF5DF2D6);
   static const secondaryDarkColor = Color(0xFF008E76);
-  static const backgroundColor = Color(0xFF10273D);
-  static const surfaceColor = Color(0xFFFFFFFF);
+  static const backgroundColor = Color(0xFF121317);
+  static const surfaceColor = Color.fromARGB(255, 38, 38, 38);
   static const errorColor = Color(0xFFB00020);
   static const onPrimaryColor = Color(0xFFFFFFFF);
   static const onSecondaryColor = Color(0xFF000000);
   static const onBackgroundColor = Color(0xFF000000);
-  static const onSurfaceColor = Color(0xFF000000);
+  static const onSurfaceColor = Color(0xFF202020);
   static const onErrorColor = Color(0xFFFFFFFF);
   static const primaryTextColor = Color(0xFF000000);
   static const secondaryTextColor = Color(0xFF000000);
@@ -48,9 +48,20 @@ class Palette {
         ),
       );
 
-  static TextStyle get title => const TextStyle(
+  static TextStyle get titleB => const TextStyle(
         color: white,
         fontSize: 20,
+        fontWeight: FontWeight.bold,
+      );
+
+  static TextStyle get title2 => const TextStyle(
+        color: white,
+        fontSize: 18,
+      );
+
+  static TextStyle get subtitle => const TextStyle(
+        color: darkGrey,
+        fontSize: 16,
         fontWeight: FontWeight.bold,
       );
 }

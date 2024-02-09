@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:roadmap_app/core/palette.dart';
-import 'package:roadmap_app/views/widgets/skill_title.dart';
+import 'package:roadmap_app/models/roadmap_node.dart';
+import 'package:roadmap_app/views/widgets/skill_tile.dart';
 import 'package:timeline_tile/timeline_tile.dart';
 
 class RoadmapTile extends StatelessWidget {
-  const RoadmapTile({super.key});
+  final RoadmapNode node;
+  const RoadmapTile({super.key, required this.node});
 
   @override
   Widget build(BuildContext context) {
@@ -39,26 +41,20 @@ class RoadmapTile extends StatelessWidget {
               endChild: Padding(
                 padding: const EdgeInsets.only(left: 15),
                 child: Text(
-                  "data",
-                  style: Palette.title,
+                  node.title,
+                  style: Palette.titleB,
                 ),
               ),
             ),
-            _buildDivider,
-            _buildDivider,
-            _buildDivider,
+            for (var child in node.children) _buildDivider,
           ],
         ),
-        const Expanded(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              SizedBox(height: 50),
-              SkillTile(),
-              SkillTile(),
-              SkillTile(),
-            ],
-          ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const SizedBox(height: 50),
+            for (var child in node.children) SkillTile(node: child),
+          ],
         )
       ],
     );

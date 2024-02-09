@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:roadmap_app/core/palette.dart';
+import 'package:roadmap_app/models/roadmap_node.dart';
 
 class SkillTile extends StatelessWidget {
-  const SkillTile({super.key});
+  final RoadmapNode node;
+  const SkillTile({super.key, required this.node});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 50,
-      margin: const EdgeInsets.all(15),
+      height: 60,
+      margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: Palette.primaryColor,
+        color: Palette.surfaceColor,
         borderRadius: BorderRadius.circular(10),
       ),
       //Content
@@ -28,26 +30,19 @@ class SkillTile extends StatelessWidget {
               // color: Palette.onPrimaryColor,
               border: Border.fromBorderSide(
                 BorderSide(
-                  color: Palette.onPrimaryColor,
+                  color: Palette.darkGrey,
                   width: 2,
                 ),
               ),
             ),
           ),
           //tile
-          const Text(
-            "data",
-            style: TextStyle(
-              color: Palette.onPrimaryColor,
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
+          Text(node.title, style: Palette.title2),
           const Spacer(),
           //Arrow Icon
           const Icon(
             Icons.arrow_forward_ios,
-            color: Palette.onPrimaryColor,
+            color: Palette.darkGrey,
           ),
         ],
       ),
