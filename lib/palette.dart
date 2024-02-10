@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Palette {
   static const primaryColor = Color(0xFF00BBF9);
@@ -7,8 +8,9 @@ class Palette {
   static const secondaryColor = Color(0xFF00BFA5);
   static const secondaryLightColor = Color(0xFF5DF2D6);
   static const secondaryDarkColor = Color(0xFF008E76);
-  static const backgroundColor = Color(0xFF121317);
-  static const surfaceColor = Color.fromARGB(255, 38, 38, 38);
+  static const backgroundColor = Color(0xFF1A1B1E);
+  static const surfaceColor = Color(0xFF2A2C31);
+  static const navbarColor = Color(0xFF101112);
   static const errorColor = Color(0xFFB00020);
   static const onPrimaryColor = Color(0xFFFFFFFF);
   static const onSecondaryColor = Color(0xFF000000);
@@ -39,6 +41,7 @@ class Palette {
   static const lightGreen = Color(0xFF689F38);
 
   static ThemeData get theme => ThemeData(
+        textTheme: GoogleFonts.montserratTextTheme(),
         primaryColor: primaryColor,
         scaffoldBackgroundColor: backgroundColor,
         appBarTheme: const AppBarTheme(
@@ -64,4 +67,13 @@ class Palette {
         fontSize: 16,
         fontWeight: FontWeight.bold,
       );
+
+  static List<BoxShadow> get shadow => [
+        BoxShadow(
+          color: Colors.black.withOpacity(0.1),
+          spreadRadius: 1,
+          blurRadius: 10,
+          offset: const Offset(0, 5),
+        )
+      ];
 }

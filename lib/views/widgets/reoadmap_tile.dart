@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roadmap_app/core/palette.dart';
+import 'package:roadmap_app/palette.dart';
 import 'package:roadmap_app/models/roadmap_node.dart';
 import 'package:roadmap_app/views/widgets/skill_tile.dart';
 import 'package:timeline_tile/timeline_tile.dart';

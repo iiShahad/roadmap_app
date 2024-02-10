@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roadmap_app/controllers/navbar_controller.dart';
-import 'package:roadmap_app/core/palette.dart';
+import 'package:roadmap_app/palette.dart';
 
 class Navbar extends ConsumerWidget {
   const Navbar({super.key});
@@ -14,7 +14,7 @@ class Navbar extends ConsumerWidget {
       height: 75,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: Palette.surfaceColor,
+        color: Palette.navbarColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Row(
