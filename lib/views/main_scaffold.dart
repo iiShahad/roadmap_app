@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roadmap_app/controllers/navbar_controller.dart';
+import 'package:roadmap_app/views/categories_view.dart';
 import 'package:roadmap_app/views/home_view.dart';
 import 'package:roadmap_app/views/roadmap_view.dart';
 import 'package:roadmap_app/views/widgets/navbar.dart';
@@ -20,6 +21,7 @@ class MainScaffold extends ConsumerWidget {
                 ref.read(navbarProvider.notifier).setPage(value),
             children: const [
               HomeView(),
+              CategoriesView(),
               RoadmapView(),
             ],
           ),

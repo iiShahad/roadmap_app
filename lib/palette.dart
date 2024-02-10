@@ -67,6 +67,11 @@ class Palette {
         fontSize: 16,
         fontWeight: FontWeight.bold,
       );
+  static TextStyle get subtitle2 => const TextStyle(
+        color: grey,
+        fontSize: 16,
+        fontWeight: FontWeight.bold,
+      );
 
   static List<BoxShadow> get shadow => [
         BoxShadow(

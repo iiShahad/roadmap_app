@@ -11,7 +11,7 @@ class Navbar extends ConsumerWidget {
     return Container(
       padding: const EdgeInsets.all(5),
       margin: const EdgeInsets.all(15),
-      height: 75,
+      height: 70,
       width: double.infinity,
       decoration: BoxDecoration(
         color: Palette.navbarColor,
@@ -21,45 +21,38 @@ class Navbar extends ConsumerWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          //Tab 1
           GestureDetector(
             onTap: () {
               ref.read(navbarProvider.notifier).setPage(0);
             },
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.home,
-                    color: ref.watch(navbarProvider) == 0
-                        ? Palette.primaryColor
-                        : Palette.darkGrey),
-                Text(
-                  "Home",
-                  style: Palette.subtitle.copyWith(
-                      color: ref.watch(navbarProvider) == 0
-                          ? Palette.primaryColor
-                          : Palette.darkGrey),
-                )
-              ],
-            ),
+            child: Icon(Icons.home,
+                size: 30,
+                color: ref.watch(navbarProvider) == 0
+                    ? Palette.primaryColor
+                    : Palette.darkGrey),
           ),
+          //Tab 2
           GestureDetector(
             onTap: () {
               ref.read(navbarProvider.notifier).setPage(1);
             },
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(Icons.category,
-                    color: ref.watch(navbarProvider) == 1
-                        ? Palette.primaryColor
-                        : Palette.darkGrey),
-                Text("Categories",
-                    style: Palette.subtitle.copyWith(
-                        color: ref.watch(navbarProvider) == 1
-                            ? Palette.primaryColor
-                            : Palette.darkGrey)),
-              ],
-            ),
+            child: Icon(Icons.category,
+                size: 30,
+                color: ref.watch(navbarProvider) == 1
+                    ? Palette.primaryColor
+                    : Palette.darkGrey),
+          ),
+          //Tab 3
+          GestureDetector(
+            onTap: () {
+              ref.read(navbarProvider.notifier).setPage(2);
+            },
+            child: Icon(Icons.settings,
+                size: 30,
+                color: ref.watch(navbarProvider) == 2
+                    ? Palette.primaryColor
+                    : Palette.darkGrey),
           )
         ],
       ),
