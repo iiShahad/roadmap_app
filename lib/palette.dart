@@ -11,7 +11,7 @@ class Palette {
   static const backgroundColor = Color(0xFF1A1B1E);
   static const surfaceColor = Color(0xFF2A2C31);
   static const navbarColor = Color(0xFF101112);
-  static const errorColor = Color(0xFFB00020);
+  static const errorColor = Color(0xFFC82A47);
   static const onPrimaryColor = Color(0xFFFFFFFF);
   static const onSecondaryColor = Color(0xFF000000);
   static const onBackgroundColor = Color(0xFF000000);
@@ -27,7 +27,7 @@ class Palette {
   static const grey = Color(0xFFB9B9B9);
   static const lightGrey = Color(0xFFE0E0E0);
   static const darkGrey = Color(0xFF616161);
-  static const red = Color(0xFFD32F2F);
+  static const red = Color.fromARGB(255, 233, 75, 75);
   static const green = Color(0xFF388E3C);
   static const blue = Color(0xFF1976D2);
   static const yellow = Color(0xFFFFA000);
@@ -44,6 +44,26 @@ class Palette {
         textTheme: GoogleFonts.montserratTextTheme(),
         primaryColor: primaryColor,
         scaffoldBackgroundColor: backgroundColor,
+        inputDecorationTheme: const InputDecorationTheme(
+          errorStyle: TextStyle(color: errorColor, fontSize: 13),
+          fillColor: Palette.surfaceColor,
+          filled: true,
+          hintStyle: TextStyle(color: Palette.darkGrey),
+          border: OutlineInputBorder(
+            borderSide: BorderSide.none,
+            borderRadius: BorderRadius.all(Radius.circular(15)),
+          ),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            minimumSize: const Size(double.infinity, 50),
+            backgroundColor: Palette.primaryColor,
+            foregroundColor: Palette.white,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+        ),
         appBarTheme: const AppBarTheme(
           backgroundColor: backgroundColor,
           elevation: 0,

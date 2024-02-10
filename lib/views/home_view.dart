@@ -4,8 +4,6 @@ import 'package:roadmap_app/controllers/home_view_controller.dart';
 import 'package:roadmap_app/palette.dart';
 import 'package:roadmap_app/views/widgets/home_app_bar.dart';
 import 'package:roadmap_app/views/widgets/roadmap_card.dart';
-import 'package:roadmap_app/views/widgets/rounded_input.dart';
-import 'package:roadmap_app/views/widgets/rounded_button.dart';
 
 class HomeView extends ConsumerWidget {
   const HomeView({super.key});
@@ -27,12 +25,14 @@ class HomeView extends ConsumerWidget {
                     const SizedBox(
                       height: 15,
                     ),
-                    RoundedInput(
+                    TextFormField(
                         controller:
                             ref.watch(homeViewControllerProvider).controller,
-                        label: "Create a new Roadmap"),
-                    RoundedButton(
-                      label: "Create",
+                        decoration: const InputDecoration(
+                          hintText: "Search Roadmaps",
+                        )),
+                    ElevatedButton(
+                      child: const Text("Create"),
                       onPressed: () {},
                     ),
                   ],

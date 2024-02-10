@@ -10,7 +10,6 @@ class RoadmapTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool isChecked = false;
     return Stack(
       alignment: Alignment.center,
       children: [
@@ -46,7 +45,7 @@ class RoadmapTile extends StatelessWidget {
                 ),
               ),
             ),
-            for (var child in node.children) _buildDivider,
+            for (var _ in node.children) _buildDivider,
           ],
         ),
         Column(

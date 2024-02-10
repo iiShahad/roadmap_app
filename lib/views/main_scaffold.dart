@@ -5,7 +5,6 @@ import 'package:roadmap_app/views/categories_view.dart';
 import 'package:roadmap_app/views/home_view.dart';
 import 'package:roadmap_app/views/roadmap_view.dart';
 import 'package:roadmap_app/views/widgets/navbar.dart';
-import 'package:roadmap_app/views/widgets/reoadmap_tile.dart';
 
 class MainScaffold extends ConsumerWidget {
   const MainScaffold({super.key});

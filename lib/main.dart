@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:roadmap_app/firebase_options.dart';
 import 'package:roadmap_app/palette.dart';
+import 'package:roadmap_app/views/auth_view.dart';
 import 'package:roadmap_app/views/main_scaffold.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
@@ -19,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: Palette.theme,
-      home: const MainScaffold(),
+      home: const AuthView(),
     );
   }
 }
